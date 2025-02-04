@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Tracking App</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .strike-zone {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: white;
+            border: 3px solid black;
+        }
+
+        .zone {
+            width: 100px;
+            height: 100px;
+            float: left;
+            box-sizing: border-box;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .highlight {
+            background-color: #f88;
+        }
+
+        .pitch {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid black;
+            transform: rotate(-45deg);
+        }
+
+        .glove {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 100px;
+        }
+
+        .home-plate {
+            position: absolute;
+            bottom: -50px;
+            left: 100px;
+            width: 100px;
+        }
+
+        .link {
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="strike-zone">
+        <div class="zone highlight" style="position: absolute; top: 0; left: 0;"></div>
+        <img src="https://via.placeholder.com/50" alt="Baseball" class="pitch">
+        <div class="arrow"></div>
+        <img src="https://via.placeholder.com/100" alt="Glove" class="glove">
+        <img src="https://via.placeholder.com/100x50" alt="Home Plate" class="home-plate">
+    </div>
+    <a href="#" class="link">Track Another Pitch</a>
+</body>
+</html>
